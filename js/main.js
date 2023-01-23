@@ -20,17 +20,19 @@ console.log('L\'utente ha' + ' ' + age + ' ' + 'anni e viaggerà per' + ' ' + ki
 
 
 //calcolo del prezzo
-let price = parseFloat( 0.21 * kilometri );
+let price = parseFloat( 0.21 * kilometri ).toFixed(2);
 console.log('il prezzo del biglietto è:' + ' ' + price + '$' );
 
 //applico gli sconti
 if (age <= 17){
-    price=price - (price/100*20);
+    price = (price - (price / 100 * 20)).toFixed(2);
     console.log(', ma grazie allo sconto del 20% il minorenne pagherà:'+price+'$');
 } else if (age >= 65){
-    price = price - (price / 100 * 40);
+    price = (price - (price / 100 * 40)).toFixed(2);
     console.log(', ma grazie allo sconto del 40% l\'anziano pagherà:' + price + '$');
 } 
 else (18 <=age <=65);{
     price = price;
 }
+
+
