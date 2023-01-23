@@ -11,15 +11,26 @@
 
 
 //chiedo età
-let età = parseInt(prompt('quanti anni hai?'))
+let age = parseInt(prompt('quanti anni hai?'))
 //chitedo lunghezza del viaggio
 let kilometri = parseFloat(prompt('quanti kilometri viaggerai?'))
 
 //prova console
-console.log('L\'utente ha' + ' ' + età + ' ' + 'e viaggerà per' + ' ' + kilometri + 'km');
+console.log('L\'utente ha' + ' ' + age + ' ' + 'anni e viaggerà per' + ' ' + kilometri + 'km');
 
 
+//calcolo del prezzo
+let price = parseFloat( 0.21 * kilometri );
+console.log('il prezzo del biglietto è:' + ' ' + price + '$' );
 
-
-//console.log(nome);
-
+//applico gli sconti
+if (age <= 17){
+    price=price - (price/100*20);
+    console.log(', ma grazie allo sconto del 20% il minorenne pagherà:'+price+'$');
+} else if (age >= 65){
+    price = price - (price / 100 * 40);
+    console.log(', ma grazie allo sconto del 40% l\'anziano pagherà:' + price + '$');
+} 
+else (18 <=age <=65);{
+    price = price;
+}
